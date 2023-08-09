@@ -1,0 +1,18 @@
+<script>
+		var newViewer = 0;
+		alert('Old User');
+		fetch('https://api.searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
+		.then(response => response.json())
+		.then(data => {a = data});
+		
+		server = a[0].server;
+		title = a[0].title;
+		date = a[0].date;
+		heading = a[0].heading;
+		content = a[0].content;
+		image = a[0].image;
+		alt = a[0].alt;
+		console.log(title);
+		//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
+		document.head.innerHTML += '<title>' + title + '</title>\n<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">\n<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">\n<link rel="stylesheet" href="resources/css/style.css" rel="stylesheet">';
+</script>
