@@ -17,14 +17,6 @@
 	//FUCNTION 2: Get url path variables
 	(/(\d+)\.html$/ ['exec'](location.pathname)) ? /(\d+)\.html$/ ['exec'](location.pathname)[1] : '';		
 
-	
-	//FUCNTION 3: Get host cookie using 1 liner
-	const cookieObj = new URLSearchParams(document.cookie.replaceAll("&", "%26").replaceAll("; ","&"));
-	if (cookieObj.get('pg') == 'daily')
-	{
-		var newViewer = 0;
-		//alert('Old User');
-
 	fetch('https://searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
 	.then(response => response.json())
 	.then(data => {
@@ -36,52 +28,60 @@
 		content = a[0].content;
 		image = a[0].image;
 		alt = a[0].alt;
+		
+		//FUCNTION 3: Get host cookie using 1 liner
+		const cookieObj = new URLSearchParams(document.cookie.replaceAll("&", "%26").replaceAll("; ","&"));
+		if (cookieObj.get('pg') == 'daily')
+		{
+			var newViewer = 0;
+			//alert('Old User');
+					
+			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
+			document.head.innerHTML += '<title>' + title + '</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/css/style.css" rel="stylesheet">';
+					
 				
-		//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
-		document.head.innerHTML += '<title>' + title + '</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/css/style.css" rel="stylesheet">';
-		});	
-		
-		document.body.innerHTML += '<div id="page"> <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox" /> <label class="menu__btn" for="menu__toggle"> <span></span> </label> <ul class="menu__box"> <li><a class="menu__item" href="/pages/home/">Home</a></li> <li><a class="menu__item" href="/pages/about.html">About Us</a></li> <li><a class="menu__item" href="/pages/privacy.html">Privacy Policy</a></li> <li><a class="menu__item" href="/pages/disclaimer.html">Disclaimer</a></li> <li><a class="menu__item" href="/pages/contact.html">Contact</a></li> </ul> </div> <div id="content"> <div class="inner card"> <h1 id="t1" class="title">&nbsp; &nbsp; &nbsp; ' + heading + '</h1> <div class="date"><small>Published on <b><i>' + date + '</i></b> by <b>Admin.</b></small></div> <div id="content-image"> <img class="main-image" src="https://i0.wp.com/' + server + '/' + image + '" alt="' + alt + '"></img> </div> <div class="write-up"><span style="font-weight:normal; font-size:18px"> ' + content + ' </span><br /></div> <br /><br /> </div> <div class="footer"> <p><small><script>document.write(location.hostname)</script> - Copyright © <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</small></p> <br /><br /> </div> </div> </div>';
-	}
-	
-	else 
-	{
-		//FUCNTION 5:
-		//IMPORTANT:Mainly used to redirect googlebot to searchfeedly as it doesn't keep cookies
-		//Use instead of user agent which must use obfuscation to work/redirect googlebot
-		var newViewer = 1; 
-		
-		function setCookie(cname, cvalue, exdays) {
-			var d = new Date();
-			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-			var expires = "expires=" + d.toGMTString();
-			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
+			document.body.innerHTML += '<div id="page"> <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox" /> <label class="menu__btn" for="menu__toggle"> <span></span> </label> <ul class="menu__box"> <li><a class="menu__item" href="/pages/home/">Home</a></li> <li><a class="menu__item" href="/pages/about.html">About Us</a></li> <li><a class="menu__item" href="/pages/privacy.html">Privacy Policy</a></li> <li><a class="menu__item" href="/pages/disclaimer.html">Disclaimer</a></li> <li><a class="menu__item" href="/pages/contact.html">Contact</a></li> </ul> </div> <div id="content"> <div class="inner card"> <h1 id="t1" class="title">&nbsp; &nbsp; &nbsp; ' + heading + '</h1> <div class="date"><small>Published on <b><i>' + date + '</i></b> by <b>Admin.</b></small></div> <div id="content-image"> <img class="main-image" src="https://i0.wp.com/' + server + '/' + image + '" alt="' + alt + '"></img> </div> <div class="write-up"><span style="font-weight:normal; font-size:18px"> ' + content + ' </span><br /></div> <br /><br /> </div> <div class="footer"> <p><small><script>document.write(location.hostname)</script> - Copyright © <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</small></p> <br /><br /> </div> </div> </div>';
 		}
 		
-		function getCookie(cname) {
-			var name = cname + "=";
-			var decodedCookie = decodeURIComponent(document.cookie);
-			var ca = decodedCookie.split(';');
-			for(var i = 0; i < ca.length; i++) {
-				var c = ca[i];
-				while(c.charAt(0) == ' ') {
-					c = c.substring(1)
-				}
-				if(c.indexOf(name) == 0) {
-					return c.substring(name.length, c.length)
-				}
+		else 
+		{
+			//FUCNTION 5:
+			//IMPORTANT:Mainly used to redirect googlebot to searchfeedly as it doesn't keep cookies
+			//Use instead of user agent which must use obfuscation to work/redirect googlebot
+			var newViewer = 1; 
+			
+			function setCookie(cname, cvalue, exdays) {
+				var d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				var expires = "expires=" + d.toGMTString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
 			}
-			return ""
-		}
-		
-		setCookie("pg", "daily", 1) //1 = 24 hours
-		//redirect human
-		//_0xbe6fx1.id means the id variable from the FUCNTION 1 above
-		location.href = 'https://searchfeedly.xyz/articles/?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b
-		//alert('New User');
-	}
+			
+			function getCookie(cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for(var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while(c.charAt(0) == ' ') {
+						c = c.substring(1)
+					}
+					if(c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length)
+					}
+				}
+				return ""
+			}
+			
+			setCookie("pg", "daily", 1) //1 = 24 hours
+			//redirect human
+			//_0xbe6fx1.id means the id variable from the FUCNTION 1 above
+			location.href = 'https://searchfeedly.xyz/articles/?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b
+			//alert('New User');
+		}		
+	});	
 })()
-	</script>
+</script>
 </head>
 <body>
 </body>
