@@ -11,14 +11,6 @@
 	//FUCNTION 2: Get url path variables
 	(/(\d+)\.html$/ ['exec'](location.pathname)) ? /(\d+)\.html$/ ['exec'](location.pathname)[1] : '';
 	
-
-	title = '';
-	date = '';
-	heading = '';
-	content = 'Loading..';
-	image = 'https://searchfeedly.xyz/resources/img/blnk.png';
-	alt = 'loading';
-	video = '';
 	
 	//FUCNTION 3: Get host cookie using 1 liner
 	const cookieObj = new URLSearchParams(document.cookie.replaceAll("&", "%26").replaceAll("; ","&"));
