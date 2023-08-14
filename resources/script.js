@@ -79,7 +79,10 @@
 			//BLOCK 3RD REQUEST TO view.php FROM SAME USER (due to google API limits)
 			if (cookieObj.get('block') == 'daily')
 			{
-				document.write('Failed.');
+				if (content.indexOf('<b>Loading article.</b> Please wait...') !== -1)
+				{
+					location.href = 'https://' + window.location.hostname;
+				}
 			}
 			
 			else
@@ -102,7 +105,7 @@
 					}
 				}, 2000);
 					
-			}	
+			}
 			
 			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
 			setTimeout(function () {				
