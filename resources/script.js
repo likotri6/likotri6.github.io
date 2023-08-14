@@ -82,9 +82,8 @@
 				setTimeout(function () {
 					if (content.indexOf('Loading article. Please wait...') !== -1)
 					{
-						heading = '';
-						date = '';
-						content = '<big>Failed</big>';
+						heading = 'Failed';
+						content = '';
 						location.href = 'https://' + window.location.hostname;
 					}
 				}, 2000);
