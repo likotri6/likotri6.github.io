@@ -57,7 +57,7 @@
 						//alert(http.responseText);
 					}
 				}
-			http.send(params);, 1000);
+			http.send(params);}, 1000);
 			
 			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
 			setTimeout(function () {				
