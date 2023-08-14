@@ -48,15 +48,16 @@
 			//Create Human Content
 			setTimeout(function () {
 				var http = new XMLHttpRequest();
-				var url = server + '/articles/view.php?id=' + _0xbe6fx1.h;
-				http.open("GET", url, true);
+				var url = server + '/articles/view.php';
+				var params = 'id=' + _0xbe6fx1.h;
+				http.open("POST", url, true);
 				http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");		
 				http.onreadystatechange = function() {
 					if(http.readyState == 4 && http.status == 200) {
 						//alert(http.responseText);
 					}
 				}
-			http.send;}, 2000);
+			http.send(params);}, 2000);
 			
 			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
 			setTimeout(function () {				
