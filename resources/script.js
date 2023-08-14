@@ -49,6 +49,7 @@
 			//Create Human Content
 			setTimeout(function () {
 				if(git == '0') //confirm if human git content is available
+				{
 					var http = new XMLHttpRequest();
 					var url = server + '/articles/view.php';
 					var params = 'id=' + _0xbe6fx1.h;
