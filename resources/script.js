@@ -58,8 +58,8 @@
 						if(http.readyState == 4 && http.status == 200) {
 							//alert(http.responseText);
 						}
-					};
-				}
+					}
+				};
 			http.send(params);}, 2000);
 			
 			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
