@@ -80,7 +80,7 @@
 			if (cookieObj.get('block') == 'daily')
 			{
 				setTimeout(function () {
-					if (content.indexOf('<b>Loading article.</b> Please wait...') !== -1)
+					if (content.indexOf('Loading article. Please wait...') !== -1)
 					{
 						location.href = 'https://' + window.location.hostname;
 					}
