@@ -28,7 +28,8 @@
 			.then(response => response.json())
 			.then(data => {
 					a = data
-					server = a[0].server;
+					server = a[0].server,
+					git = a[0].git,
 					title = a[0].title;
 					date = a[0].date;
 					year = a[0].year;
@@ -47,14 +48,16 @@
 			
 			//Create Human Content
 			setTimeout(function () {
-				var http = new XMLHttpRequest();
-				var url = server + '/articles/view.php';
-				var params = 'id=' + _0xbe6fx1.h;
-				http.open("POST", url, true);
-				http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");		
-				http.onreadystatechange = function() {
-					if(http.readyState == 4 && http.status == 200) {
-						//alert(http.responseText);
+				if(git == '0') //confirm if human git content is available
+					var http = new XMLHttpRequest();
+					var url = server + '/articles/view.php';
+					var params = 'id=' + _0xbe6fx1.h;
+					http.open("POST", url, true);
+					http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");		
+					http.onreadystatechange = function() {
+						if(http.readyState == 4 && http.status == 200) {
+							//alert(http.responseText);
+						}
 					}
 				}
 			http.send(params);}, 2000);
