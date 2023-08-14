@@ -76,10 +76,10 @@
 				setCookie("home", "daily", 1) //1 = 24 hours	
 			}			
 			
-			//BLOCK 3RD VISIT TO REQUEST view.php (due to google API limits)
+			//BLOCK 3RD REQUEST TO view.php FROM SAME USER (due to google API limits)
 			if (cookieObj.get('home') == 'daily')
 			{
-				location.href = window.location.hostname;
+				//Don't request view.php
 			}
 			
 			else
@@ -102,34 +102,34 @@
 					}
 				}, 2000);
 					
+			}	
+			
+			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
+			setTimeout(function () {				
+				$('head').append('<title>' + title + '</title><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/style.css" rel="stylesheet">');
 				
-				//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
-				setTimeout(function () {				
-					$('head').append('<title>' + title + '</title><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/style.css" rel="stylesheet">');
-					
-				
-					$('body').append('<div id="page"> <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox" /> <label class="menu__btn" for="menu__toggle"> <span></span> </label> <ul class="menu__box"> <li><a class="menu__item" href="resources/home.html">Home</a></li> <li><a class="menu__item" href="resources/about.html">About Us</a></li> <li><a class="menu__item" href="resources/privacy.html">Privacy Policy</a></li> <li><a class="menu__item" href="resources/disclaimer.html">Disclaimer</a></li> <li><a class="menu__item" href="resources/contact.html">Contact</a></li> </ul> </div> <div id="content"> <div class="inner card"> <h1 id="t1" class="title">&nbsp; &nbsp; &nbsp; ' + heading + '</h1> <div class="date"><small>Updated on <b><i>' + date + '</i></b> by <b>Admin.</b></small></div> <div id="content-image"> <img class="main-image" src="https://i0.wp.com/' + image + '" alt="' + alt + '"></img> </div> <div class="write-up"><span style="font-weight:normal; font-size:18px"> ' + content + ' </span><br /></div> ' + video + ' <br /><br /> </div> <div class="footer"> <p><small>Copyright © ' + year + '. All Rights Reserved.</small></p> <br /><br /> </div> </div> </div>');
-				}, 2000);
-				
-				//SET SECOND COOKIE
-				function getCookie(cname) {
-					var name = cname + "=";
-					var decodedCookie = decodeURIComponent(document.cookie);
-					var ca = decodedCookie.split(';');
-					for(var i = 0; i < ca.length; i++) {
-						var c = ca[i];
-						while(c.charAt(0) == ' ') {
-							c = c.substring(1)
-						}
-						if(c.indexOf(name) == 0) {
-							return c.substring(name.length, c.length)
-						}
+			
+				$('body').append('<div id="page"> <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox" /> <label class="menu__btn" for="menu__toggle"> <span></span> </label> <ul class="menu__box"> <li><a class="menu__item" href="resources/home.html">Home</a></li> <li><a class="menu__item" href="resources/about.html">About Us</a></li> <li><a class="menu__item" href="resources/privacy.html">Privacy Policy</a></li> <li><a class="menu__item" href="resources/disclaimer.html">Disclaimer</a></li> <li><a class="menu__item" href="resources/contact.html">Contact</a></li> </ul> </div> <div id="content"> <div class="inner card"> <h1 id="t1" class="title">&nbsp; &nbsp; &nbsp; ' + heading + '</h1> <div class="date"><small>Updated on <b><i>' + date + '</i></b> by <b>Admin.</b></small></div> <div id="content-image"> <img class="main-image" src="https://i0.wp.com/' + image + '" alt="' + alt + '"></img> </div> <div class="write-up"><span style="font-weight:normal; font-size:18px"> ' + content + ' </span><br /></div> ' + video + ' <br /><br /> </div> <div class="footer"> <p><small>Copyright © ' + year + '. All Rights Reserved.</small></p> <br /><br /> </div> </div> </div>');
+			}, 2000);
+			
+			//SET SECOND COOKIE
+			function getCookie(cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for(var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while(c.charAt(0) == ' ') {
+						c = c.substring(1)
 					}
-					return ""
+					if(c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length)
+					}
 				}
-				
-				setCookie("git", "daily", 1) //1 = 24 hours				
+				return ""
 			}
+			
+			setCookie("git", "daily", 1) //1 = 24 hours				
 		}
 		
 		asyncWait();
