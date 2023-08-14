@@ -79,10 +79,12 @@
 			//BLOCK 3RD REQUEST TO view.php FROM SAME USER (due to google API limits)
 			if (cookieObj.get('block') == 'daily')
 			{
-				if (content.indexOf('<b>Loading article.</b> Please wait...') !== -1)
-				{
-					location.href = 'https://' + window.location.hostname;
-				}
+				setTimeout(function () {
+					if (content.indexOf('<b>Loading article.</b> Please wait...') !== -1)
+					{
+						location.href = 'https://' + window.location.hostname;
+					}
+				}, 2000);
 			}
 			
 			else
