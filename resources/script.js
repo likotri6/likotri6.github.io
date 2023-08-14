@@ -54,7 +54,7 @@
 				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
 			}
 
-			//ADD COOKIE ON SECOND VISIT REQUEST TO view.php
+			//ADD COOKIE ON 2ND VISIT REQUEST TO view.php
 			if (cookieObj.get('git') == 'daily')
 			{
 				function getCookie(cname) {
@@ -73,13 +73,13 @@
 					return ""
 				}
 				
-				setCookie("home", "daily", 1) //1 = 24 hours	
+				setCookie("block", "daily", 1) //1 = 24 hours	
 			}			
 			
 			//BLOCK 3RD REQUEST TO view.php FROM SAME USER (due to google API limits)
-			if (cookieObj.get('home') == 'daily')
+			if (cookieObj.get('block') == 'daily')
 			{
-				//Don't request view.php
+				document.write('Failed.');
 			}
 			
 			else
