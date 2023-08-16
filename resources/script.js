@@ -107,6 +107,10 @@
 						}				
 						http.send(params);
 					}
+					else
+					{
+						console.log('waiting');
+					}
 				}, 2000);
 					
 			}
