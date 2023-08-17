@@ -17,6 +17,7 @@
 	if (cookieObj.get('pg') == 'daily')
 	{
 		var newViewer = 0;
+		var content = 'none';
 		//alert('Old User');
 				
 		//USE JS async function
@@ -74,7 +75,7 @@
 				}
 				
 				setCookie("block", "daily", 1) //1 = 24 hours	
-			}			
+			}		
 			
 			//BLOCK 3RD REQUEST TO view.php FROM SAME USER (due to google API limits)
 			if (cookieObj.get('block') == 'daily')
@@ -91,28 +92,39 @@
 			
 			else
 			{
-				//Create Human Content
-				setTimeout(function () {
-					if(git == '0' && cookieObj.get('git') !== 'daily') //confirm if human git content is available
-					{
-						var http = new XMLHttpRequest();
-						var url = server + '/articles/view.php';
-						var params = 'id=' + _0xbe6fx1.h;
-						http.open("POST", url, true);
-						http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");		
-						http.onreadystatechange = function() {
-							if(http.readyState == 4 && http.status == 200) {
-								//alert(http.responseText);
-							}
-						}				
-						http.send(params);
-					}
-					else
-					{
-						console.log('waiting');
-					}
-				}, 2000);
-					
+				//Get URL variable =rl (reloaded)
+				url_string = window.location.href;
+				var main_url = new URL(url_string);
+				var rl = main_url.searchParams.get("rl");
+				
+				if (rl == '1')
+				{
+					//BLOCK view.php
+					//Don't trigger view.php twice on same content.
+				}
+				else
+				{
+					//Create Human Content
+					setTimeout(function () {
+						if(git == '0') //fetch view.php on 2nd try only
+						{
+							var http = new XMLHttpRequest();
+							var url = server + '/articles/view.php';
+							var params = 'id=' + _0xbe6fx1.h;
+							http.open("POST", url, true);
+							http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");		
+							http.onreadystatechange = function() {
+								if(http.readyState == 4 && http.status == 200) {
+									//alert(http.responseText);
+								}
+							}			
+							http.send(params);
+							//reload page in 10 seconds --faster than body --set reload parameter (rl)
+							url = location.protocol + '//' + location.host + location.pathname + '?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b + '&g=' + _0xbe6fx1.g + '&rl=1';
+							setTimeout(function(){window.location.href = url;},10000);
+						}
+					}, 2000);					
+				}				
 			}
 			
 			//FUCNTION 4: IF COOKIE add code to header to get JSON data from server		
