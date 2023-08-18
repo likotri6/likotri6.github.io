@@ -58,30 +58,29 @@
 				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
 			}
 
-
-			//STEP 7 : BLOCK 3rd request to new KW FROM same user --BLOCK REQUEST TO view.php (due to google API limits)
-
-			if (cookieObj.get('view2') == 'daily')
-			{					
-				if (git == '0') //IF NO human content
-				{
-					heading = 'Failed';
-					content = '';
-					location.href = 'https://' + window.location.hostname;
-				}
-			}
 			
-			else
+			setTimeout(function ()  //Wait for variables to load
 			{
-				// STEP 8 : //BLOCK POST to view.php on same page multiple reloads.
-				if (_0xbe6fx1.rl == '1')
-				{
-					//BLOCK view.php					
+				//STEP 7 : BLOCK 3rd request to new KW FROM same user --BLOCK REQUEST TO view.php (due to google API limits)
+				if (cookieObj.get('view2') == 'daily')
+				{	
+					if (git == '0') //IF NO human content
+					{
+						heading = 'Failed';
+						content = '';
+						location.href = 'https://' + window.location.hostname;
+					}				
 				}
+				
 				else
-				{						
-					setTimeout(function () 
-					{					
+				{
+					// STEP 8 : //BLOCK POST to view.php on same page multiple reloads.
+					if (_0xbe6fx1.rl == '1')
+					{
+						//BLOCK view.php					
+					}
+					else
+					{				
 						if (git == '0') //IF NO human content in ./articles/git/
 						{
 							// STEP 9 : Allow 1st POST request to view.php & SET COOKIE
@@ -126,7 +125,7 @@
 								}								
 								setCookie("view2", "daily", 1) //1 = 24 hours
 							}
-
+	
 							// STEP 10 : Create Human Content
 							var http = new XMLHttpRequest();
 							var url = server + '/articles/view.php';
@@ -143,9 +142,9 @@
 							url = location.protocol + '//' + location.host + location.pathname + '?h=' + _0xbe6fx1.h + '&b=' + _0xbe6fx1.b + '&g=' + _0xbe6fx1.g + '&rl=1';
 							setTimeout(function(){window.location.href = url;},10000);
 						}
-					}, 2000);
-				}				
-			}
+					}				
+				}
+			}, 2000);
 			
 			// STEP 11: ADD CONTENT FROM JSON data on server		
 			setTimeout(function () {				
