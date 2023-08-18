@@ -59,7 +59,7 @@
 			}
 
 			// Function 7 : CHECK 1st COOKIE ON 2nd visit & PUT 3rd COOKIE --Allow POST request to view.php
-			if (cookieObj.get('git') == 'daily')
+			if (cookieObj.get('view') == 'daily')
 			{
 				function getCookie(cname) {
 					var name = cname + "=";
@@ -150,7 +150,7 @@
 				return ""
 			}
 			
-			setCookie("git", "daily", 1); //1 = 24 hours		
+			setCookie("view", "daily", 1); //1 = 24 hours		
 		}
 		
 		asyncWait();
