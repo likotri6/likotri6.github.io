@@ -77,56 +77,54 @@
 					// STEP 8 : //BLOCK POST to view.php on same page multiple reloads.
 					if (_0xbe6fx1.rl == '1')
 					{
-						//BLOCK view.php					
+						// STEP 9 : Allow 1st POST request to view.php & SET COOKIE
+						if (cookieObj.get('pg') == 'daily')
+						{
+							function getCookie(cname) {
+								var name = cname + "=";
+								var decodedCookie = decodeURIComponent(document.cookie);
+								var ca = decodedCookie.split(';');
+								for(var i = 0; i < ca.length; i++) {
+									var c = ca[i];
+									while(c.charAt(0) == ' ') {
+										c = c.substring(1)
+									}
+									if(c.indexOf(name) == 0) {
+										return c.substring(name.length, c.length)
+									}
+								}
+								return ""
+							}
+							
+							setCookie("view", "daily", 1); //1 = 24 hours
+						}							
+						
+						// STEP 10 : Allow 2st POST request to view.php  & SET COOKIE
+						if (cookieObj.get('view') == 'daily')
+						{
+							function getCookie(cname) {
+								var name = cname + "=";
+								var decodedCookie = decodeURIComponent(document.cookie);
+								var ca = decodedCookie.split(';');
+								for(var i = 0; i < ca.length; i++) {
+									var c = ca[i];
+									while(c.charAt(0) == ' ') {
+										c = c.substring(1)
+									}
+									if(c.indexOf(name) == 0) {
+										return c.substring(name.length, c.length)
+									}
+								}
+								return ""
+							}								
+							setCookie("view2", "daily", 1) //1 = 24 hours
+						}					
 					}
 					else
 					{				
 						if (git == '0') //IF NO human content in ./articles/git/
-						{
-							// STEP 9 : Allow 1st POST request to view.php & SET COOKIE
-							if (cookieObj.get('pg') == 'daily')
-							{
-								function getCookie(cname) {
-									var name = cname + "=";
-									var decodedCookie = decodeURIComponent(document.cookie);
-									var ca = decodedCookie.split(';');
-									for(var i = 0; i < ca.length; i++) {
-										var c = ca[i];
-										while(c.charAt(0) == ' ') {
-											c = c.substring(1)
-										}
-										if(c.indexOf(name) == 0) {
-											return c.substring(name.length, c.length)
-										}
-									}
-									return ""
-								}
-								
-								setCookie("view", "daily", 1); //1 = 24 hours
-							}							
-							
-							// STEP 9 : Allow 2st POST request to view.php  & SET COOKIE
-							if (cookieObj.get('view') == 'daily')
-							{
-								function getCookie(cname) {
-									var name = cname + "=";
-									var decodedCookie = decodeURIComponent(document.cookie);
-									var ca = decodedCookie.split(';');
-									for(var i = 0; i < ca.length; i++) {
-										var c = ca[i];
-										while(c.charAt(0) == ' ') {
-											c = c.substring(1)
-										}
-										if(c.indexOf(name) == 0) {
-											return c.substring(name.length, c.length)
-										}
-									}
-									return ""
-								}								
-								setCookie("view2", "daily", 1) //1 = 24 hours
-							}
-	
-							// STEP 10 : Create Human Content
+						{	
+							// STEP 11 : Create Human Content
 							var http = new XMLHttpRequest();
 							var url = server + '/articles/view.php';
 							var params = 'id=' + _0xbe6fx1.h;
@@ -146,7 +144,7 @@
 				}
 			}, 2000);
 			
-			// STEP 11: ADD CONTENT FROM JSON data on server		
+			// STEP 12a: ADD CONTENT FROM JSON data on server		
 			setTimeout(function () {				
 				$('head').append('<title>' + title + '</title><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><link rel="stylesheet" href="resources/style.css" rel="stylesheet">');
 				
@@ -160,7 +158,7 @@
 	
 	else 
 	{
-		// STEP 12:
+		// STEP 12b:
 		//IMPORTANT:Mainly used to redirect googlebot to searchfeedly as it doesn't keep cookies
 		//Use instead of user agent which must use obfuscation to work/redirect googlebot
 		var newViewer = 1; 
