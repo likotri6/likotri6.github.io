@@ -62,7 +62,7 @@
 			setTimeout(function ()  //Wait for variables to load
 			{
 				//STEP 7 : BLOCK 3rd request to new KW FROM same user --BLOCK REQUEST TO view.php (due to google API limits)
-				if (cookieObj.get('view2') == 'daily')
+				if (cookieObj.get('view') == 'daily')
 				{	
 					if (git == '0') //IF NO human content
 					{
@@ -83,7 +83,7 @@
 					{				
 						if (git == '0') //IF NO human content in ./articles/git/
 						{
-							// STEP 9a : Allow 1st POST request to view.php & SET COOKIE
+							// STEP 9 : Allow 2st POST request to view.php & SET COOKIE
 							if (cookieObj.get('pg') == 'daily')
 							{
 								function getCookie(cname) {
@@ -104,27 +104,6 @@
 								
 								setCookie("view", "daily", 1); //1 = 24 hours
 							}							
-							
-							// STEP 9b : Allow 2st POST request to view.php  & SET COOKIE
-							if (cookieObj.get('view') == 'daily')
-							{
-								function getCookie(cname) {
-									var name = cname + "=";
-									var decodedCookie = decodeURIComponent(document.cookie);
-									var ca = decodedCookie.split(';');
-									for(var i = 0; i < ca.length; i++) {
-										var c = ca[i];
-										while(c.charAt(0) == ' ') {
-											c = c.substring(1)
-										}
-										if(c.indexOf(name) == 0) {
-											return c.substring(name.length, c.length)
-										}
-									}
-									return ""
-								}								
-								setCookie("view2", "daily", 1) //1 = 24 hours
-							}
 	
 							// STEP 10 : Create Human Content
 							var http = new XMLHttpRequest();
