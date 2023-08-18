@@ -59,7 +59,7 @@
 			}
 
 			// Function 7 : CHECK 1st COOKIE ON 2nd visit & PUT 3rd COOKIE --Allow POST request to view.php
-			if (cookieObj.get('2nd_vist') == 'daily')
+			if (cookieObj.get('git') == 'daily')
 			{
 				function getCookie(cname) {
 					var name = cname + "=";
@@ -77,12 +77,12 @@
 					return ""
 				}
 				
-				setCookie("3rd_vist", "daily", 1) //1 = 24 hours
+				setCookie("failed", "daily", 1) //1 = 24 hours
 			}
 			
 			//Function 8 : IF 3rd request to new KW FROM same user --BLOCK REQUEST TO view.php (due to google API limits)
 
-			if (cookieObj.get('3rd_vist') == 'daily')
+			if (cookieObj.get('failed') == 'daily')
 			{					
 				if (git == '0') //IF NO human content
 				{
@@ -150,7 +150,7 @@
 				return ""
 			}
 			
-			setCookie("2nd_vist", "daily", 1); //1 = 24 hours		
+			setCookie("git", "daily", 1); //1 = 24 hours		
 		}
 		
 		asyncWait();
